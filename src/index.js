@@ -59,6 +59,10 @@ const groq = new Groq({ apiKey: process.env.GROQ_KEY });
 //   }
 // });
 
+app.get("/", (req, res) => {
+  res.status(200).send("test");
+});
+
 app.post("/upload-audio", upload.single("audio"), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
