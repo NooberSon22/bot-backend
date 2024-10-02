@@ -20,7 +20,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://magnificent-medovik-2365d5.netlify.app/"],
+    origin: ["http://localhost:5173", "https://magnificent-medovik-2365d5.netlify.app/", "*"],
   })
 );
 app.use(express.json());
