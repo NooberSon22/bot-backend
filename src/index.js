@@ -73,7 +73,7 @@ app.post("/upload-audio", upload.single("audio"), async (req, res) => {
   try {
     const transcription = await groq.audio.transcriptions.create({
       file: fs.createReadStream(audioPath),
-      model: "distil-whisper-large-v3-en", // Required model to use for transcription
+      model: "whisper-large-v3-turbo", // Required model to use for transcription
       response_format: "json",
       temperature: 0.0,
     });
